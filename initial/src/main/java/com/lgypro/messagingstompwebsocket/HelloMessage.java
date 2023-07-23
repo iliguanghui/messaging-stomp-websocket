@@ -1,4 +1,4 @@
-package com.example.messagingstompwebsocket;
+package com.lgypro.messagingstompwebsocket;
 
 public class HelloMessage {
     private String name;

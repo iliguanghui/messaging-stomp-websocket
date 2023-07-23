@@ -1,4 +1,4 @@
-package com.example.messagingstompwebsocket;
+package com.lgypro.messagingstompwebsocket;
 
 public class Greeting {
     private String content;
