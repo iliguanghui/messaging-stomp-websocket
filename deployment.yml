@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: myapp
-  name: myapp
+    app: messaging-stomp-websocket
+  name: messaging-stomp-websocket
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myapp
+      app: messaging-stomp-websocket
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: myapp
+        app: messaging-stomp-websocket
     spec:
       containers:
       - image: registry.cn-hangzhou.aliyuncs.com/lgypro/messaging-stomp-websocket:v1
