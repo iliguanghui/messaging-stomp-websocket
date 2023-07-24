@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: messaging-stomp-websocket
+  annotations:
+    nginx.org/proxy-read-timeout: 120s
+    nginx.org/proxy-send-timeout: 120s
+    nginx.org/websocket-services: messaging-stomp-websocket
+spec:
+  rules:
+  - host: messaging.liguanghui.pro
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: messaging-stomp-websocket
+            port:
+              number: 8080
+  tls:
+  - hosts:
+      - "messaging.liguanghui.pro"
+    secretName: liguanghui.pro
