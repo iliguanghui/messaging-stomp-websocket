@@ -14,6 +14,11 @@ spec:
       creationTimestamp: null
       labels:
         app: messaging-stomp-websocket
+      annotations:
+        prometheus.io/path: /metrics
+        prometheus.io/port: "12345"
+        prometheus.io/scheme: http
+        prometheus.io/scrape: "true"
     spec:
       containers:
       - image: registry.cn-hangzhou.aliyuncs.com/lgypro/messaging-stomp-websocket:v1
